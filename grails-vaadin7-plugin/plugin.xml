@@ -30,7 +30,7 @@
   </dependencies>
   <plugins>
     <build>
-      <plugin group='org.grails.plugins' name='tomcat' version='2.2.3' />
+      <plugin group='org.grails.plugins' name='tomcat' version='2.2.4' />
     </build>
   </plugins>
   <runtimePluginRequirements />
