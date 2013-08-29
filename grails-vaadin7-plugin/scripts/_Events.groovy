@@ -14,5 +14,8 @@ eventCreateWarStart = { name, stagingDir ->
 	// not in the war carchive, the files size is 15 mb
 	if(removeClientJar) 
 		ant.delete(dir:"${stagingDir}/WEB-INF/lib/", includes: "vaadin-client-7.*.*.jar", verbose: true)
+
+	// remove the client compiler in any case
+	ant.delete(dir:"${stagingDir}/WEB-INF/lib/", includes: "vaadin-client-compiler-*.*.*.jar", verbose: true)
 	
 }
