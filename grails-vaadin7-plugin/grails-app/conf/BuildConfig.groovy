@@ -27,11 +27,13 @@ grails.project.dependency.resolution = {
         grailsRepo "http://grails.org/plugins"
     }
 
+    vaadinVersion = "7.1.5"
+
     dependencies {
-        compile 'com.vaadin:vaadin-server:7.1.3'
-        compile 'com.vaadin:vaadin-client-compiled:7.1.3'
-        compile 'com.vaadin:vaadin-client:7.1.3'
-        compile 'com.vaadin:vaadin-themes:7.1.3'
+        compile "com.vaadin:vaadin-server:${vaadinVersion}"
+        compile "com.vaadin:vaadin-client-compiled:${vaadinVersion}"
+        compile "com.vaadin:vaadin-client:${vaadinVersion}"
+        compile "com.vaadin:vaadin-themes:${vaadinVersion}"
     }
 
     plugins {
