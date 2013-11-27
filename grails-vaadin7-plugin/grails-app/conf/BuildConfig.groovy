@@ -23,8 +23,6 @@ grails.project.dependency.resolution = {
         mavenRepo "http://oss.sonatype.org/content/repositories/vaadin-snapshots"
         mavenRepo "http://maven.vaadin.com/vaadin-addons"
         mavenRepo "http://repo.springsource.org/release"
-
-        grailsRepo "http://grails.org/plugins"
     }
 
     vaadinVersion = "7.1.7"
