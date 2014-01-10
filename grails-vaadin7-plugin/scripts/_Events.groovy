@@ -75,7 +75,7 @@ eventCreateWarStart = { name, stagingDir ->
     }
 
     // remove the client compiler in any case
-    ant.delete(dir:"${stagingDir}/WEB-INF/lib/", includes: "vaadin-client-compiler-*.*.*.jar", verbose: true)
+    ant.delete(dir:"${stagingDir}/WEB-INF/lib/", includes: "vaadin-client-compiler-7.*.*.jar", verbose: true)
 
     GantState.verbosity = GantState.WARNINGS_AND_ERRORS
     ant.logger.setMessageOutputLevel(GantState.verbosity)
