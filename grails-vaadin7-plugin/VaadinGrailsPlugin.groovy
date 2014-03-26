@@ -9,7 +9,7 @@ class VaadinGrailsPlugin {
 
     private static final String DEFAULT_SERVLET = "com.vaadin.grails.GrailsVaadinServlet";
 
-    def version = "7.1.9.1"
+    def version = "7.1.11"
     def grailsVersion = "2.0 > *"
     def pluginExcludes = [
             "grails-app/views/error.gsp"
@@ -55,6 +55,7 @@ class VaadinGrailsPlugin {
         def servletName = "VaadinServlet "
         def widgetset = config.widgetset
         def asyncSupported = config.asyncSupported
+        Map initParams = config.initParams
 
         def servlets = xml."servlet"
 
@@ -79,11 +80,16 @@ class VaadinGrailsPlugin {
                             "param-value"(widgetset)
                         }
                     }
-
+                    for (def name : initParams?.keySet()) {
+                        "init-param" {
+                            "param-name"(name)
+                            "param-value"(initParams.get(name))
+                        }
+                    }
                     "load-on-startup"("1")
                     
                     if (asyncSupported) {
-                        "async-supported"("1")
+                        "async-supported"("true")
                     }
                 }
             }
