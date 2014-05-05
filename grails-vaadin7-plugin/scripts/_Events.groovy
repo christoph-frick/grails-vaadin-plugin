@@ -77,6 +77,9 @@ eventCreateWarStart = { name, stagingDir ->
     // remove the client compiler in any case
     ant.delete(dir:"${stagingDir}/WEB-INF/lib/", includes: "vaadin-client-compiler-7.*.*.jar", verbose: true)
 
+    // remove the theme compiler in any case
+    ant.delete(dir:"${stagingDir}/WEB-INF/lib/", includes: "vaadin-theme-compiler-7.*.*.jar", verbose: true)
+
     // remove gwt-unitCache (by-product of widgetset compilation)
     ant.delete(dir:"${stagingDir}/VAADIN/gwt-unitCache", verbose: true)
 
