@@ -5,7 +5,7 @@ includeTargets << grailsScript("_GrailsRun")
 target(widgetset_init: "init") {
     vaadinConfig = new ConfigSlurper(grails.util.Environment.current.name).parse(new File("${basedir}/grails-app/conf/VaadinConfig.groovy").text)
     ant.property(name: "widgetset", value: vaadinConfig.vaadin.widgetset)
-    ant.property(name: "workers", value: "4")
+    ant.property(name: "workers", value: vaadinConfig.vaadin.compile.widgetset.workers?:"4")
     ant.property(name: "widgetset-path", value: "")
     ant.property(name: "client-side-destination", value: "web-app/VAADIN/widgetsets")
     ant.property(name: "generate.widgetset", value: "1")
