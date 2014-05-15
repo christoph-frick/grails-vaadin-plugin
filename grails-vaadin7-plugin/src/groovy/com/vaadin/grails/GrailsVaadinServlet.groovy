@@ -3,12 +3,14 @@ package com.vaadin.grails
 import com.vaadin.server.VaadinServlet
 import com.vaadin.server.DeploymentConfiguration
 import com.vaadin.server.VaadinServletService
+import groovy.transform.CompileStatic
 
 /**
  *
  *
  * @author Ondrej Kvasnovsky
  */
+@CompileStatic
 class GrailsVaadinServlet extends VaadinServlet {
 
     @Override

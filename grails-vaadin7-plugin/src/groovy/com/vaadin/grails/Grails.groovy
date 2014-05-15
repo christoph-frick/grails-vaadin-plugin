@@ -1,5 +1,6 @@
 package com.vaadin.grails
 
+import groovy.transform.CompileStatic
 import org.springframework.beans.BeansException
 import grails.util.Holders
 import org.springframework.context.MessageSource
@@ -14,6 +15,7 @@ import org.slf4j.LoggerFactory
  *
  * @author Ondrej Kvasnovsky
  */
+@CompileStatic
 class Grails {
 
     private static final transient Logger log = LoggerFactory.getLogger(this)
